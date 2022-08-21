@@ -2,20 +2,20 @@ import React from 'react';
 import Logo from '../Assets/logo.png'
 import SecodaryLogo from '../Assets/logo-secondary.png'
 
-const Footer = ({isDark}) => {
+const Footer = ({ isDark }) => {
     return (
-        <div className='w-full pt-10 dark:bg-[#17181B] bg-[#F7F7F8]'>
+        <div className='w-full pt-10 dark:bg-[#17181B] bg-[#F7F7F8] dark:border dark:border-black'>
             <footer class="p-4 w-11/12 mx-auto sm:p-6">
                 <div class="mb-6">
-                    <a href="#" class="flex items-center">
-                        <img src={isDark ? Logo : SecodaryLogo} class="mr-3 h-8" alt="FlowBite Logo" />
+                    <a href="#" class="flex items-center justify-center md:justify-start">
+                        <img src={isDark ? Logo : SecodaryLogo} class="text-center mr-3 h-8" alt="FlowBite Logo" />
                     </a>
                 </div>
                 <div>
-                    <div class="md:grid grid-cols-4 gap-10 md:justify-between">
-                        <div>
-                            <p class="mb-6 text-[13px] text-gray-900 dark:text-gray-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id eveniet tempora nisi explicabo, nobis quod sit eum nesciunt sed dolor.</p>
-                            <ul class="text-gray-600 dark:text-gray-400 flex items-center">
+                    <div class="md:flex gap-5 md:justify-between">
+                        <div className='md:w-3/12'>
+                            <p class="mb-6 text-[13px] text-gray-900 dark:text-gray-400 text-center md:text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id eveniet tempora nisi explicabo, nobis quod sit eum nesciunt sed dolor.</p>
+                            <ul class="text-gray-600 dark:text-gray-400 flex items-center justify-center md:justify-start my-10 md:my-0">
                                 <li className='mx-4'>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
                                         <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
@@ -38,55 +38,58 @@ const Footer = ({isDark}) => {
                                 </li>
                             </ul>
                         </div>
-                        <div>
-                            <h2 class="mb-4 text-sm font-semibold text-gray-900  dark:text-white">Company</h2>
-                            <ul class="text-gray-600 dark:text-gray-400">
-                                <li class="mb-2">
-                                    <a href="https://flowbite.com/" class="hover:underline">About Us</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="https://tailwindcss.com/" class="hover:underline">Carrers</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="https://tailwindcss.com/" class="hover:underline">Case Study</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="https://tailwindcss.com/" class="hover:underline">Blog</a>
-                                </li>
-                                <li class="mb-2">
-                                    <a href="https://tailwindcss.com/" class="hover:underline">Contact Us</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h2 class="mb-4 text-sm font-semibold text-gray-900  dark:text-white">Influencer</h2>
-                            <ul class="text-gray-600 dark:text-gray-400">
-                                <li class="mb-2">
-                                    <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Join as Influencer</a>
-                                </li>
-                                <li>
-                                    <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">HypeSocial</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h2 class="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">Advertiser</h2>
-                            <ul class="text-gray-600 dark:text-gray-400">
-                                <li class="mb-2">
-                                    <a href="#" class="hover:underline">Join as Advertiser</a>
-                                </li>
-                                <li>
-                                    <a href="#" class="hover:underline">Hypelink</a>
-                                </li>
-                            </ul>
+
+                        <div className='grid grid-cols-2 md:grid-cols-3 md:w-8/12'>
+                            <div>
+                                <h2 class="mb-4 text-sm font-semibold text-gray-900  dark:text-white">Company</h2>
+                                <ul class="text-gray-600 dark:text-gray-400">
+                                    <li class="mb-2">
+                                        <a href="https://flowbite.com/" class="hover:underline">About Us</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="https://tailwindcss.com/" class="hover:underline">Carrers</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="https://tailwindcss.com/" class="hover:underline">Case Study</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="https://tailwindcss.com/" class="hover:underline">Blog</a>
+                                    </li>
+                                    <li class="mb-2">
+                                        <a href="https://tailwindcss.com/" class="hover:underline">Contact Us</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h2 class="mb-4 text-sm font-semibold text-gray-900  dark:text-white">Influencer</h2>
+                                <ul class="text-gray-600 dark:text-gray-400">
+                                    <li class="mb-2">
+                                        <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Join as Influencer</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">HypeSocial</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h2 class="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">Advertiser</h2>
+                                <ul class="text-gray-600 dark:text-gray-400">
+                                    <li class="mb-2">
+                                        <a href="#" class="hover:underline">Join as Advertiser</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="hover:underline">Hypelink</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
 
                     </div>
                 </div>
-                <div class="mt-20 sm:flex sm:items-center sm:justify-between">
-                    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">&copy; <a href="https://flowbite.com/" class="hover:underline">Hypescoute 2022</a>. All Rights Reserved.
+                <div class="md:mt-20 mt-10 flex md:flex-row text-center flex-col-reverse sm:items-center sm:justify-between">
+                    <span class="text-sm my-6 text-gray-500 sm:text-center dark:text-gray-400">&copy; <a href="https://flowbite.com/" class="hover:underline">Hypescoute 2022</a>. All Rights Reserved.
                     </span>
-                    <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+                    <div class="flex md:mt-4 space-x-6 justify-center sm:mt-0">
                         <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white text-sm">
                             Terms & Conditions
                         </a>

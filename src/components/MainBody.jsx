@@ -3,7 +3,7 @@ import Img1 from '../Assets/img1.png'
 
 const MainBody = () => {
     return (
-        <div className='dark:bg-black py-10 dark:text-gray-50'>
+        <div className='dark:bg-black py-10 dark:text-gray-50 dark:border dark:border-black'>
             <div className='w-10/12 mx-auto'>
                 <div className='grid md:grid-cols-3 gap-10'>
                     <div className='dark:bg-[#17181B] bg-[#F7F7F8] w-full flex items-center justify-center text-center h-[475px] rounded'>
