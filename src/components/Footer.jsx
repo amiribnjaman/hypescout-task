@@ -2,13 +2,13 @@ import React from 'react';
 import Logo from '../Assets/logo.png'
 import SecodaryLogo from '../Assets/logo-secondary.png'
 
-const Footer = () => {
+const Footer = ({isDark}) => {
     return (
-        <div className='w-full pt-10 dark:bg-[#17181B]'>
+        <div className='w-full pt-10 dark:bg-[#17181B] bg-[#F7F7F8]'>
             <footer class="p-4 w-11/12 mx-auto sm:p-6">
                 <div class="mb-6">
                     <a href="#" class="flex items-center">
-                        <img src={Logo} class="mr-3 h-8" alt="FlowBite Logo" />
+                        <img src={isDark ? Logo : SecodaryLogo} class="mr-3 h-8" alt="FlowBite Logo" />
                     </a>
                 </div>
                 <div>

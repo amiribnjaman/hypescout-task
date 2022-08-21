@@ -6,10 +6,10 @@ const MainBody = () => {
         <div className='dark:bg-black py-10 dark:text-gray-50'>
             <div className='w-10/12 mx-auto'>
                 <div className='grid md:grid-cols-3 gap-10'>
-                    <div className='dark:bg-[#17181B] w-full flex items-center justify-center text-center h-[475px] rounded'>
+                    <div className='dark:bg-[#17181B] bg-[#F7F7F8] w-full flex items-center justify-center text-center h-[475px] rounded'>
                         <div className='text-center'>
                             <img className='mx-auto mb-5' src={Img1} alt="" />
-                            <h3 className='text-xl font-semibold text-white'>Maksudur Hasan</h3>
+                            <h3 className='text-xl font-semibold dark:text-white text-black'>Maksudur Hasan</h3>
                             <h5 className='text-md text-[#637381] flex items-center justify-center my-2'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="mr-2 bi bi-geo-alt" viewBox="0 0 16 16">
                                     <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
@@ -49,10 +49,10 @@ const MainBody = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='dark:bg-[#17181B] w-full flex items-center justify-center text-center h-[475px] rounded'>
+                    <div className='dark:bg-[#17181B] bg-[#F7F7F8] w-full flex items-center justify-center text-center h-[475px] rounded'>
                         <div className='text-center'>
                             <img className='mx-auto mb-5' src={Img1} alt="" />
-                            <h3 className='text-xl font-semibold text-white'>Maksudur Hasan</h3>
+                            <h3 className='text-xl font-semibold dark:text-white text-black'>Maksudur Hasan</h3>
                             <h5 className='text-md text-[#637381] flex items-center justify-center my-2'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="mr-2 bi bi-geo-alt" viewBox="0 0 16 16">
                                     <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
@@ -92,10 +92,10 @@ const MainBody = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='dark:bg-[#17181B] w-full flex items-center justify-center text-center h-[475px] rounded'>
+                    <div className='dark:bg-[#17181B] bg-[#F7F7F8] w-full flex items-center justify-center text-center h-[475px] rounded'>
                         <div className='text-center'>
                             <img className='mx-auto mb-5' src={Img1} alt="" />
-                            <h3 className='text-xl font-semibold text-white'>Maksudur Hasan</h3>
+                            <h3 className='text-xl font-semibold dark:text-white text-black'>Maksudur Hasan</h3>
                             <h5 className='text-md text-[#637381] flex items-center justify-center my-2'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="mr-2 bi bi-geo-alt" viewBox="0 0 16 16">
                                     <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
