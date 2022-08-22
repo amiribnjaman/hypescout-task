@@ -11,11 +11,13 @@ const Navbar = ({ isDark, setIsDark, isLight, setIsLight }) => {
         setShowThemeMenu(!showThemeMenu)
     }
 
+    // Handle dark
     const handleIsDark = () => {
         setIsDark(true)
         setIsLight(false)
     }
 
+    // Handle light
     const handleIsLight = () => {
         setIsLight(true)
         setIsDark(false)
@@ -23,8 +25,8 @@ const Navbar = ({ isDark, setIsDark, isLight, setIsLight }) => {
 
     return (
         <div className='dark:bg-[#17181B] bg-[#F7F7F8] dark:text-gray-50 flex items-center dark:border dark:border-black'>
-            <nav class="w-11/12 mx-auto mt-0 py-3">
-                <div class="flex md:flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5">
+            <nav class="w-10/12 mx-auto mt-0 py-3">
+                <div class="flex md:flex-wrap justify-between items-center mx-auto max-w-screen-xl py-2.5">
                     <a href="" class="flex text-white items-center">
                         <img src={isDark ? Logo : LogoSecondary} class="mr-3 h-8" alt="Flowbite Logo" />
                     </a>
@@ -73,21 +75,21 @@ const Navbar = ({ isDark, setIsDark, isLight, setIsLight }) => {
                                         <ul className=''>
                                             <li
                                                 onClick={handleIsDark}
-                                                className='flex py-2 px-10 hover:text-[#8C87D1] dark:hover:bg-black hover:bg-white mx-1 rounded pl-4 pr-12'>
+                                                className='flex py-2 px-10 dark:hover:text-[#8C87D1] hover:text-[#564FB1] dark:hover:bg-black hover:bg-white mx-1 rounded pl-4 pr-12'>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
                                                     <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
                                                 </svg> <span className='ml-2'>Dark</span>
                                             </li>
                                             <li
                                                 onClick={handleIsLight}
-                                                className='flex py-2 pl-4 pr-12 hover:text-[#8C87D1] dark:hover:bg-black hover:bg-white mx-1 rounded'>
+                                                className='flex py-2 pl-4 pr-12 dark:hover:text-[#8C87D1] hover:text-[#564FB1] dark:hover:bg-black hover:bg-white mx-1 rounded'>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
                                                     <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
                                                 </svg> <span className='ml-2'>Light</span>
                                             </li>
                                             <li
                                                 onClick={handleIsDark}
-                                                className='flex py-2 pl-4 pr-12 hover:text-[#8C87D1] dark:hover:bg-black hover:bg-white mx-1 rounded'>
+                                                className='flex py-2 pl-4 pr-12 dark:hover:text-[#8C87D1] hover:text-[#564FB1] dark:hover:bg-black hover:bg-white mx-1 rounded'>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-display" viewBox="0 0 16 16">
                                                     <path d="M0 4s0-2 2-2h12s2 0 2 2v6s0 2-2 2h-4c0 .667.083 1.167.25 1.5H11a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1h.75c.167-.333.25-.833.25-1.5H2s-2 0-2-2V4zm1.398-.855a.758.758 0 0 0-.254.302A1.46 1.46 0 0 0 1 4.01V10c0 .325.078.502.145.602.07.105.17.188.302.254a1.464 1.464 0 0 0 .538.143L2.01 11H14c.325 0 .502-.078.602-.145a.758.758 0 0 0 .254-.302 1.464 1.464 0 0 0 .143-.538L15 9.99V4c0-.325-.078-.502-.145-.602a.757.757 0 0 0-.302-.254A1.46 1.46 0 0 0 13.99 3H2c-.325 0-.502.078-.602.145z" />
                                                 </svg> <span className='ml-2'>System</span>

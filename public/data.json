@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Jack handson",
+        "location": "Dhaka, Bangladesh",
+        "joined": "Jun 20, 2020",
+        "follwers": "15K",
+        "categories": "Fahion",
+        "gender": "Male",
+        "image": "./img/person1.png"
+    },
+    {
+        "id": 2,
+        "name": "Hannan",
+        "location": "Chittagong, Bangladesh",
+        "joined": "Jan 29, 2021",
+        "follwers": "25K",
+        "categories": "Fahion",
+        "gender": "Male",
+        "image": "./img/person2.png"
+    },
+    {
+        "id": 3,
+        "name": "Jan Sutton",
+        "location": "Feni, Bangladesh",
+        "joined": "Dec 01, 2022",
+        "follwers": "10K",
+        "categories": "Fahion",
+        "gender": "Male",
+        "image": "./img/person3.png"
+    },
+    {
+        "id": 4,
+        "name": "Pablo Russell",
+        "location": "Dhaka, Bangladesh",
+        "joined": "Jun 20, 2019",
+        "follwers": "30K",
+        "categories": "Fahion",
+        "gender": "Male",
+        "image": "./img/person4.png"
+    },
+    {
+        "id": 5,
+        "name": "Erin Colon",
+        "location": "Dhaka, Bangladesh",
+        "joined": "Jun 25, 2020",
+        "follwers": "10K",
+        "categories": "Fahion",
+        "gender": "Male",
+        "image": "./img/person5.png"
+    },
+    {
+        "id": 6,
+        "name": "James",
+        "location": "Dhaka, Bangladesh",
+        "joined": "Jun 20, 2018",
+        "follwers": "20K",
+        "categories": "Fahion",
+        "gender": "Male",
+        "image": "./img/person6.png"
+    }
+]
