@@ -5,6 +5,7 @@ import Person from '../Assets/person.png'
 
 const Navbar = ({ isDark, setIsDark, isLight, setIsLight }) => {
     const [showThemeMenu, setShowThemeMenu] = useState(false)
+    const [showMainNav, setShowMainNav] = useState(false)
 
     // handle show theme menu
     const handleShowTheme = () => {
@@ -24,34 +25,36 @@ const Navbar = ({ isDark, setIsDark, isLight, setIsLight }) => {
     }
 
     return (
-        <div className='dark:bg-[#17181B] bg-[#F7F7F8] dark:text-gray-50 flex items-center dark:border dark:border-black'>
+        <div className='dark:bg-[#17181B] bg-[#F7F7F8] dark:text-gray-50 flex items-center dark:border dark:border-black relative'>
             <nav class="w-10/12 mx-auto mt-0 py-3">
                 <div class="flex md:flex-wrap justify-between items-center mx-auto max-w-screen-xl py-2.5">
                     <a href="" class="flex text-white items-center">
                         <img src={isDark ? Logo : LogoSecondary} class="mr-3 h-8" alt="Flowbite Logo" />
                     </a>
                     <div>
-                        <div class="py-2 px-4 hidden md:block mx-auto max-w-screen-xl md:px-6">
-                            <div class="flex items-center justify-center">
-                                <ul class="mt-0 space-x-4 text-sm font-semibold flex justify-between">
-                                    <li className='mr-2 rounded-sm'>
-                                        <a href="#" class="bg-[#202124] bg- px-4 py-2 text-white" aria-current="page">Dashboard</a>
-                                    </li>
-                                    <li className='mr-2 rounded-sm'>
-                                        <a href="#" class="text-gray-900  px-4 py-2 hover:bg-[#202124] dark:text-[#637381] hover:text-white">Campaign</a>
-                                    </li>
-                                    <li className='mr-2 rounded-sm'>
-                                        <a href="#" class="text-gray-900 dark:text-[#637381] px-4 py-2 hover:bg-[#202124] hover:text-white">Hypesocial</a>
-                                    </li>
-                                    <li className='mr-2 rounded-sm'>
-                                        <a href="#" class="text-gray-900 dark:text-[#637381] px-4 py-2 hover:bg-[#202124] hover:text-white">Insights</a>
-                                    </li>
-                                </ul>
+                        <div class={`py-2 px-4 mx-auto max-w-screen-xl md:px-6`}>
+                            <div className={`${showMainNav ? 'block' : 'hidden'}  md:block`}>
+                                <div class="flex items-center justify-center">
+                                    <ul class="mt-0 md:space-x-4 text-sm font-semibold md:flex top-[60px] md:top-0 md:relative right-[15px] shadow md:shadow-none absolute justify-between z-10 bg-slate-50 dark:bg-black px-4 md:dark:bg-[#17181B] md:bg-[#F7F7F8]">
+                                        <li className='md:mr-2 my-4 md:my-0 rounded-sm'>
+                                            <a href="#" class="bg-[#202124] bg- px-4 py-2 text-white" aria-current="page">Dashboard</a>
+                                        </li>
+                                        <li className='mr-2 ml-0 my-4 md:my-0 rounded-sm'>
+                                            <a href="#" class="text-gray-900  px-4 py-2 hover:bg-[#202124] dark:text-[#637381] hover:text-white">Campaign</a>
+                                        </li>
+                                        <li className='mr-2 my-4 md:my-0 rounded-sm'>
+                                            <a href="#" class="text-gray-900 dark:text-[#637381] px-4 py-2 hover:bg-[#202124] hover:text-white">Hypesocial</a>
+                                        </li>
+                                        <li className='mr-2 my-4 md:my-0 rounded-sm'>
+                                            <a href="#" class="text-gray-900 dark:text-[#637381] px-4 py-2 hover:bg-[#202124] hover:text-white">Insights</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="flex items-center">
-                        <ul class="mt-0 md:mr-6 space-x-4 text-sm font-medium flex justify-between items-center">
+                        <ul class="mt-0 space-x-4 text-sm font-medium flex justify-between items-center">
                             <li className='mr-1 md:mr-2'>
                                 <a href="#" class="text-gray-90 dark:text-[#637381] hover:underline" aria-current="page">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
@@ -71,7 +74,7 @@ const Navbar = ({ isDark, setIsDark, isLight, setIsLight }) => {
                                         </svg>}
 
                                     {/*------------ Theme color Menu---------------- */}
-                                    <div className={`${showThemeMenu ? ' top-10 md:-left-12 -left-20 shadow-sm md:shadow-none' : ' top-0 left-96'} dark:bg-[#17181B] bg-[#F7F7F8] py-2 absolute rounded-md z-10`}>
+                                    <div className={`${showThemeMenu ? ' block shadow-sm md:shadow-none' : ' hidden'} top-[37px] left-[-55px] dark:bg-[#17181B] bg-[#F7F7F8] py-2 absolute rounded-md z-10`}>
                                         <ul className=''>
                                             <li
                                                 onClick={handleIsDark}
@@ -103,10 +106,17 @@ const Navbar = ({ isDark, setIsDark, isLight, setIsLight }) => {
                             <li className='mr-2 hidden md:block'>
                                 <a href="#" class="text-gray-900 dark:text-[#637381]">Hi, Rakib</a>
                             </li>
-                            <li className='mr-1 md:mr-2'>
-                                <a href="#" class="text-gray-900 w-16 h-16 dark:text-white hover:underline">
+                            <li className='mr-1'>
+                                <a href="#" class="text-gray-900 w-12 h-12 md:w-16 md:h-16 dark:text-white hover:underline">
                                     <img src={Person} alt="" />
                                 </a>
+                            </li>
+                            <li 
+                            onClick={()=> setShowMainNav(!showMainNav)}
+                            className='block md:hidden mr-1 md:mr-2'>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+                                </svg>
                             </li>
                         </ul>
                     </div>

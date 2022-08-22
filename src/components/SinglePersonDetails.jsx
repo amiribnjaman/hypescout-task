@@ -51,7 +51,7 @@ const SinglePersonDetails = (props) => {
                 <div className='mt-6'>
                     <ul className='flex gap-4'>
                         <li className='flex flex-col border border-[#637381] border-dashed px-2 py-1'>
-                            <span className='text-[#564FB1] dark:text-[#95B3CD] text-sm font-semibold'>{follwers}</span>
+                            <span className='text-[#564FB1] dark:text-[#95B3CD] text-sm font-semibold'>{follwers}K</span>
                             <span className='dark:text-[#637381] text-sm'>Follwers</span>
                         </li>
                         <li className='flex flex-col border border-[#637381] border-dashed px-2 py-1'>

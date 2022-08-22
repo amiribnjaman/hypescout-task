@@ -11,12 +11,16 @@ function App() {
   const [isLight, setIsLight] = useState(false)
   const [search, setSearch] = useState('')
   const [personDetails, setPersonDetails] = useState([])
+  const [rangeValue, setRangeValue] = useState(0)
+
 
   useEffect(() => {
     fetch('data.json')
       .then(res => res.json())
       .then(data => setPersonDetails(data))
   }, [])
+  // }
+
 
   return (
     <div className={`App ${isDark ? 'dark' : ''}`}>
@@ -29,10 +33,14 @@ function App() {
         />
         <SearchSection
           personDetails={personDetails}
-          setSearch={setSearch} />
+          setSearch={setSearch}
+          rangeValue={rangeValue}
+          setRangeValue={setRangeValue}
+        />
         <MainBody
           search={search}
           personDetails={personDetails}
+          rangeValue={rangeValue}
         />
         <Footer isDark={isDark} />
       </div>

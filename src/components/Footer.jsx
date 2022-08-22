@@ -5,7 +5,7 @@ import SecodaryLogo from '../Assets/logo-secondary.png'
 const Footer = ({ isDark }) => {
     return (
         <div className='w-full pt-10 dark:bg-[#17181B] bg-[#F7F7F8] dark:border dark:border-black'>
-            <footer class="p-4 w-11/12 mx-auto sm:p-6">
+            <footer class="py-4 w-10/12 mx-auto sm:py-6">
                 <div class="mb-6">
                     <a href="#" class="flex items-center justify-center md:justify-start">
                         <img src={isDark ? Logo : SecodaryLogo} class="text-center mr-3 h-8" alt="FlowBite Logo" />
