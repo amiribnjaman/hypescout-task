@@ -5,6 +5,8 @@ import SearchSection from './components/SearchSection';
 import Footer from './components/Footer';
 import MainBody from './components/MainBody';
 import { useEffect, useState } from 'react';
+import Pagination from './components/Pagination';
+import SinglePersonDetails from './components/SinglePersonDetails';
 
 function App() {
   const [isDark, setIsDark] = useState(true)
@@ -12,14 +14,59 @@ function App() {
   const [search, setSearch] = useState('')
   const [personDetails, setPersonDetails] = useState([])
   const [rangeValue, setRangeValue] = useState(0)
+  const [range, setRange] = useState(0)
+  const [countryValue, setCountryValue] = useState('')
+  const [country, setCountry] = useState('')
 
-
+  // Load the data from json file
   useEffect(() => {
     fetch('data.json')
       .then(res => res.json())
       .then(data => setPersonDetails(data))
   }, [])
-  // }
+
+
+  // Handle filter apply funciton
+  const handleFilterApply = () => {
+
+    // search by name
+    const searchPerson = personDetails.filter((d) => d.name.toLowerCase().includes(search.toLowerCase()))
+
+    // range filter
+    const rangeFilter = personDetails.filter((r) => r.follwers == rangeValue)
+
+    // country filter
+    const countryFilter = personDetails.filter((c) => c.location.split(', ')[1].toLowerCase() == countryValue)
+
+    // range and country filter
+    const rangeAndCountry = personDetails.filter((rc) => rc.follwers == rangeValue && rc.location.split(', ')[1].toLowerCase() == countryValue)
+
+    let result;
+    if (rangeAndCountry.length > 0) {
+      result = rangeAndCountry.map((person) => <SinglePersonDetails
+        person={person} />)
+    } else if (rangeFilter.length > 0) {
+      result = rangeFilter.map((person) => <SinglePersonDetails 
+        person={person} />)
+    } else if (countryFilter.length > 0) {
+      result = countryFilter.map((person) => <SinglePersonDetails 
+        person={person} />)
+    } else {
+      result = searchPerson.map((person) => <SinglePersonDetails
+        person={person} />)
+    }
+
+    return result
+  }
+
+
+  // Handle filter reset
+  const handleFilterReset = () => {
+    setRange(0)
+    setCountry(null)
+    setCountryValue('')
+    handleFilterApply(setRangeValue(0))
+  }
 
 
   return (
@@ -36,12 +83,22 @@ function App() {
           setSearch={setSearch}
           rangeValue={rangeValue}
           setRangeValue={setRangeValue}
+          setRange={setRange}
+          range={range}
+          handleFilterApply={handleFilterApply}
+          handleFilterReset={handleFilterReset}
+          setCountry={setCountry}
+          country={country}
+          setCountryValue={setCountryValue}
+          countryValue={countryValue}
         />
         <MainBody
           search={search}
           personDetails={personDetails}
           rangeValue={rangeValue}
+          handleFilterApply={handleFilterApply}
         />
+        <Pagination />
         <Footer isDark={isDark} />
       </div>
     </div>
