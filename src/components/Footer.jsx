@@ -44,19 +44,19 @@ const Footer = ({ isDark }) => {
                                 <h2 class="mb-4 text-sm font-semibold text-gray-900  dark:text-white">Company</h2>
                                 <ul class="text-gray-600 dark:text-gray-400">
                                     <li class="mb-2">
-                                        <a href="https://flowbite.com/" class="hover:underline">About Us</a>
+                                        <a href="https://flowbite.com/" class="hover:underline text-sm md:text-base">About Us</a>
                                     </li>
                                     <li class="mb-2">
-                                        <a href="https://tailwindcss.com/" class="hover:underline">Carrers</a>
+                                        <a href="https://tailwindcss.com/" class="hover:underline text-sm md:text-base">Carrers</a>
                                     </li>
                                     <li class="mb-2">
-                                        <a href="https://tailwindcss.com/" class="hover:underline">Case Study</a>
+                                        <a href="https://tailwindcss.com/" class="hover:underline text-sm md:text-base">Case Study</a>
                                     </li>
                                     <li class="mb-2">
-                                        <a href="https://tailwindcss.com/" class="hover:underline">Blog</a>
+                                        <a href="https://tailwindcss.com/" class="hover:underline text-sm md:text-base">Blog</a>
                                     </li>
                                     <li class="mb-2">
-                                        <a href="https://tailwindcss.com/" class="hover:underline">Contact Us</a>
+                                        <a href="https://tailwindcss.com/" class="hover:underline text-sm md:text-base">Contact Us</a>
                                     </li>
                                 </ul>
                             </div>
@@ -64,10 +64,10 @@ const Footer = ({ isDark }) => {
                                 <h2 class="mb-4 text-sm font-semibold text-gray-900  dark:text-white">Influencer</h2>
                                 <ul class="text-gray-600 dark:text-gray-400">
                                     <li class="mb-2">
-                                        <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Join as Influencer</a>
+                                        <a href="https://github.com/themesberg/flowbite" class="hover:underline text-sm md:text-base ">Join as Influencer</a>
                                     </li>
                                     <li>
-                                        <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">HypeSocial</a>
+                                        <a href="https://discord.gg/4eeurUVvTy" class="hover:underline text-sm md:text-base">HypeSocial</a>
                                     </li>
                                 </ul>
                             </div>
@@ -75,10 +75,10 @@ const Footer = ({ isDark }) => {
                                 <h2 class="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">Advertiser</h2>
                                 <ul class="text-gray-600 dark:text-gray-400">
                                     <li class="mb-2">
-                                        <a href="#" class="hover:underline">Join as Advertiser</a>
+                                        <a href="#" class="hover:underline text-sm md:text-base">Join as Advertiser</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="hover:underline">Hypelink</a>
+                                        <a href="#" class="hover:underline text-sm md:text-base">Hypelink</a>
                                     </li>
                                 </ul>
                             </div>

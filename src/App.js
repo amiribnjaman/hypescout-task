@@ -17,11 +17,13 @@ function App() {
   const [range, setRange] = useState(0)
   const [countryValue, setCountryValue] = useState('')
   const [country, setCountry] = useState('')
+  const [showFilter, setShowFilter] = useState(false)
 
   // States for pagination
   const [currentPage, setCurrentPage] = useState(1)
   const [dataPerPage, setDataPerPage] = useState(3)
 
+  // Pagination calculation
   const indexOfLastPost = currentPage * dataPerPage
   const indexOfFirstPost = indexOfLastPost - dataPerPage
   const currentData = personDetails.slice(indexOfFirstPost, indexOfLastPost)
@@ -76,6 +78,7 @@ function App() {
     setCountry(null)
     setCountryValue('')
     handleFilterApply(setRangeValue(0))
+    setShowFilter(!showFilter)
   }
 
 
@@ -83,6 +86,7 @@ function App() {
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber)
   }
+  
 
   return (
     <div className={`App ${isDark ? 'dark' : ''}`}>
@@ -106,6 +110,8 @@ function App() {
           country={country}
           setCountryValue={setCountryValue}
           countryValue={countryValue}
+          showFilter={showFilter}
+          setShowFilter={setShowFilter}
         />
         <MainBody
           handleFilterApply={handleFilterApply}

@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-const SearchSection = ({ personDetails, range, setSearch, setRangeValue, setRange, handleFilterReset, country, setCountry, setCountryValue }) => {
-    const [showFilter, setShowFilter] = useState(false)
+const SearchSection = ({ personDetails, range, setSearch, setRangeValue, setRange, handleFilterReset, country, setCountry, setCountryValue, showFilter, setShowFilter }) => {
     const [showToolTip, setShowToolTip] = useState(false)
 
     // Active the filter apply btn
     const applyFilterBtn = () => {
         setRangeValue(range)
         setCountryValue(country)
+        setShowFilter(!showFilter)
     }
 
     // Handle tooltip show
