@@ -8,7 +8,6 @@ const MainBody = ({ handleFilterApply }) => {
                 <div className='grid md:grid-cols-3 gap-10'>
                     {
                         handleFilterApply()?.length > 0 ? handleFilterApply() : <p className='text-2xl dark:text-white text-black text-center'> No data available!</p>
-
                     }
                 </div>
             </div>
