@@ -19,6 +19,7 @@ function App() {
   const [country, setCountry] = useState('')
   const [showFilter, setShowFilter] = useState(false)
 
+
   // States for pagination
   const [currentPage, setCurrentPage] = useState(1)
   const [dataPerPage, setDataPerPage] = useState(3)
@@ -36,7 +37,7 @@ function App() {
   }, [])
 
 
-  
+
   // Handle filter apply funciton
   const handleFilterApply = () => {
 
@@ -53,24 +54,37 @@ function App() {
     const rangeAndCountry = personDetails.filter((rc) => rc.follwers == rangeValue && rc.location.split(', ')[1].toLowerCase() == countryValue)
 
     let result = [];
+    let findDataAmout = 0
     if (rangeAndCountry?.length > 0) {
       result = rangeAndCountry.map((person) => <SinglePersonDetails
         person={person} />)
+      findDataAmout = result.length
+    } else if (rangeValue != rangeFilter && countryValue != countryFilter) {
+      result = []
+      findDataAmout = result.length
     } else if (rangeFilter?.length > 0) {
       result = rangeFilter.map((person) => <SinglePersonDetails
         person={person} />)
+      findDataAmout = result.length
     } else if (countryFilter?.length > 0) {
       result = countryFilter.map((person) => <SinglePersonDetails
         person={person} />)
+      findDataAmout = result.length
     } else if (search && searchPerson?.length > 0) {
       result = searchPerson.map((person) => <SinglePersonDetails
         person={person} />)
-    } else {
+      findDataAmout = result.length
+    } else if (search == '' && rangeValue == 0) {
       result = currentData.map((person) => <SinglePersonDetails
         person={person} />)
+      findDataAmout = personDetails.length
+    }
+    else {
+      result = []
+      findDataAmout = result.length
     }
 
-    return result
+    return [result, findDataAmout]
   }
 
 
@@ -79,12 +93,12 @@ function App() {
     setRangeValue(range)
     setCountryValue(country)
     setShowFilter(!showFilter)
-}
+  }
 
   // Handle filter reset
   const handleFilterReset = () => {
     setRange(0)
-    setCountry(null)
+    setCountry('')
     setCountryValue('')
     handleFilterApply(setRangeValue(0))
     setShowFilter(!showFilter)
@@ -95,7 +109,7 @@ function App() {
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber)
   }
-  
+
 
   return (
     <div className={`App ${isDark ? 'dark' : ''}`}>
