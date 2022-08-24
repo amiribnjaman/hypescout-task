@@ -58,5 +58,35 @@
         "categories": "Fahion",
         "gender": "Male",
         "image": "./img/person6.png"
+    },
+    {
+        "id": 7,
+        "name": "Handerson",
+        "location": "Dhaka, India",
+        "joined": "Jun 20, 2018",
+        "follwers": "10",
+        "categories": "Fahion",
+        "gender": "Male",
+        "image": "./img/person7.png"
+    },
+    {
+        "id": 8,
+        "name": "Van Dijk",
+        "location": "Dhaka, USA",
+        "joined": "Jun 20, 2018",
+        "follwers": "30",
+        "categories": "Fahion",
+        "gender": "Male",
+        "image": "./img/person8.png"
+    },
+    {
+        "id": 9,
+        "name": "M. Salah",
+        "location": "Dhaka, France",
+        "joined": "Jun 20, 2018",
+        "follwers": "45",
+        "categories": "Fahion",
+        "gender": "Male",
+        "image": "./img/person9.png"
     }
 ]

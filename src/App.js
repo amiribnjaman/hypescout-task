@@ -18,13 +18,20 @@ function App() {
   const [countryValue, setCountryValue] = useState('')
   const [country, setCountry] = useState('')
 
+  // States for pagination
+  const [currentPage, setCurrentPage] = useState(1)
+  const [dataPerPage, setDataPerPage] = useState(3)
+
+  const indexOfLastPost = currentPage * dataPerPage
+  const indexOfFirstPost = indexOfLastPost - dataPerPage
+  const currentData = personDetails.slice(indexOfFirstPost, indexOfLastPost)
+
   // Load the data from json file
   useEffect(() => {
     fetch('data.json')
       .then(res => res.json())
       .then(data => setPersonDetails(data))
   }, [])
-
 
   // Handle filter apply funciton
   const handleFilterApply = () => {
@@ -41,18 +48,21 @@ function App() {
     // range and country filter
     const rangeAndCountry = personDetails.filter((rc) => rc.follwers == rangeValue && rc.location.split(', ')[1].toLowerCase() == countryValue)
 
-    let result;
-    if (rangeAndCountry.length > 0) {
+    let result = [];
+    if (rangeAndCountry?.length > 0) {
       result = rangeAndCountry.map((person) => <SinglePersonDetails
         person={person} />)
-    } else if (rangeFilter.length > 0) {
-      result = rangeFilter.map((person) => <SinglePersonDetails 
+    } else if (rangeFilter?.length > 0) {
+      result = rangeFilter.map((person) => <SinglePersonDetails
         person={person} />)
-    } else if (countryFilter.length > 0) {
-      result = countryFilter.map((person) => <SinglePersonDetails 
+    } else if (countryFilter?.length > 0) {
+      result = countryFilter.map((person) => <SinglePersonDetails
+        person={person} />)
+    } else if (search && searchPerson?.length > 0) {
+      result = searchPerson.map((person) => <SinglePersonDetails
         person={person} />)
     } else {
-      result = searchPerson.map((person) => <SinglePersonDetails
+      result = currentData.map((person) => <SinglePersonDetails
         person={person} />)
     }
 
@@ -68,6 +78,11 @@ function App() {
     handleFilterApply(setRangeValue(0))
   }
 
+
+  // handle paginate next page
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber)
+  }
 
   return (
     <div className={`App ${isDark ? 'dark' : ''}`}>
@@ -93,13 +108,15 @@ function App() {
           countryValue={countryValue}
         />
         <MainBody
-          search={search}
-          personDetails={personDetails}
-          rangeValue={rangeValue}
           handleFilterApply={handleFilterApply}
         />
-        <Pagination />
-        <Footer isDark={isDark} />
+        <Pagination
+          dataPerPage={dataPerPage}
+          totalData={personDetails.length}
+          paginate={paginate}
+        />
+        <Footer
+          isDark={isDark} />
       </div>
     </div>
   );
