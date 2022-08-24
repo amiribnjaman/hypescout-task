@@ -7,7 +7,7 @@ const Footer = ({ isDark }) => {
         <div className='w-full pt-10 dark:bg-[#17181B] bg-[#F7F7F8] dark:border dark:border-black'>
             <footer class="py-4 w-10/12 mx-auto sm:py-6">
                 <div class="mb-6">
-                    <a href="#" class="flex items-center justify-center md:justify-start">
+                    <a href="/" class="flex items-center justify-center md:justify-start">
                         <img src={isDark ? Logo : SecodaryLogo} class="text-center mr-3 h-8" alt="FlowBite Logo" />
                     </a>
                 </div>
@@ -44,19 +44,19 @@ const Footer = ({ isDark }) => {
                                 <h2 class="mb-4 text-sm font-semibold text-gray-900  dark:text-white">Company</h2>
                                 <ul class="text-gray-600 dark:text-gray-400">
                                     <li class="mb-2">
-                                        <a href="https://flowbite.com/" class="hover:underline text-sm md:text-base">About Us</a>
+                                        <a href="javascript:void(0)" class="hover:underline text-sm md:text-base">About Us</a>
                                     </li>
                                     <li class="mb-2">
-                                        <a href="https://tailwindcss.com/" class="hover:underline text-sm md:text-base">Carrers</a>
+                                        <a href="javascript:void(0)" class="hover:underline text-sm md:text-base">Carrers</a>
                                     </li>
                                     <li class="mb-2">
-                                        <a href="https://tailwindcss.com/" class="hover:underline text-sm md:text-base">Case Study</a>
+                                        <a href="javascript:void(0)" class="hover:underline text-sm md:text-base">Case Study</a>
                                     </li>
                                     <li class="mb-2">
-                                        <a href="https://tailwindcss.com/" class="hover:underline text-sm md:text-base">Blog</a>
+                                        <a href="javascript:void(0)" class="hover:underline text-sm md:text-base">Blog</a>
                                     </li>
                                     <li class="mb-2">
-                                        <a href="https://tailwindcss.com/" class="hover:underline text-sm md:text-base">Contact Us</a>
+                                        <a href="javascript:void(0)" class="hover:underline text-sm md:text-base">Contact Us</a>
                                     </li>
                                 </ul>
                             </div>
@@ -64,10 +64,10 @@ const Footer = ({ isDark }) => {
                                 <h2 class="mb-4 text-sm font-semibold text-gray-900  dark:text-white">Influencer</h2>
                                 <ul class="text-gray-600 dark:text-gray-400">
                                     <li class="mb-2">
-                                        <a href="https://github.com/themesberg/flowbite" class="hover:underline text-sm md:text-base ">Join as Influencer</a>
+                                        <a href="javascript:void(0)" class="hover:underline text-sm md:text-base ">Join as Influencer</a>
                                     </li>
                                     <li>
-                                        <a href="https://discord.gg/4eeurUVvTy" class="hover:underline text-sm md:text-base">HypeSocial</a>
+                                        <a href="javascript:void(0)" class="hover:underline text-sm md:text-base">HypeSocial</a>
                                     </li>
                                 </ul>
                             </div>
@@ -75,10 +75,10 @@ const Footer = ({ isDark }) => {
                                 <h2 class="mb-4 text-sm font-semibold text-gray-900 uppercase dark:text-white">Advertiser</h2>
                                 <ul class="text-gray-600 dark:text-gray-400">
                                     <li class="mb-2">
-                                        <a href="#" class="hover:underline text-sm md:text-base">Join as Advertiser</a>
+                                        <a href="javascript:void(0)" class="hover:underline text-sm md:text-base">Join as Advertiser</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="hover:underline text-sm md:text-base">Hypelink</a>
+                                        <a href="javascript:void(0)" class="hover:underline text-sm md:text-base">Hypelink</a>
                                     </li>
                                 </ul>
                             </div>
@@ -90,13 +90,13 @@ const Footer = ({ isDark }) => {
                     <span class="text-sm my-6 text-gray-500 sm:text-center dark:text-gray-400">&copy; <a href="https://flowbite.com/" class="hover:underline">Hypescoute 2022</a>. All Rights Reserved.
                     </span>
                     <div class="flex md:mt-4 space-x-6 justify-center sm:mt-0">
-                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white text-sm">
+                        <a href="javascript:void(0)" class="text-gray-500 hover:text-gray-900 dark:hover:text-white text-sm">
                             Terms & Conditions
                         </a>
-                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-whit text-sm">
+                        <a href="javascript:void(0)" class="text-gray-500 hover:text-gray-900 dark:hover:text-whit text-sm">
                             Privacy
                         </a>
-                        <a href="#" class="text-gray-500 hover:text-gray-900 dark:hover:text-white text-sm">
+                        <a href="javascript:void(0)" class="text-gray-500 hover:text-gray-900 dark:hover:text-white text-sm">
                             Sitemap
                         </a>
                     </div>

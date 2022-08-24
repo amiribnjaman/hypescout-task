@@ -35,6 +35,8 @@ function App() {
       .then(data => setPersonDetails(data))
   }, [])
 
+
+  
   // Handle filter apply funciton
   const handleFilterApply = () => {
 
@@ -72,6 +74,13 @@ function App() {
   }
 
 
+  // Active the filter apply btn
+  const applyFilterBtn = () => {
+    setRangeValue(range)
+    setCountryValue(country)
+    setShowFilter(!showFilter)
+}
+
   // Handle filter reset
   const handleFilterReset = () => {
     setRange(0)
@@ -100,18 +109,13 @@ function App() {
         <SearchSection
           personDetails={personDetails}
           setSearch={setSearch}
-          rangeValue={rangeValue}
-          setRangeValue={setRangeValue}
           setRange={setRange}
           range={range}
-          handleFilterApply={handleFilterApply}
           handleFilterReset={handleFilterReset}
           setCountry={setCountry}
-          country={country}
-          setCountryValue={setCountryValue}
-          countryValue={countryValue}
           showFilter={showFilter}
           setShowFilter={setShowFilter}
+          applyFilterBtn={applyFilterBtn}
         />
         <MainBody
           handleFilterApply={handleFilterApply}
