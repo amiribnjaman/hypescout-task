@@ -16,12 +16,12 @@ const Pagination = ({ dataPerPage, totalData, paginate }) => {
                     <span>Privous</span>
                 </div> */}
                 <nav aria-label="Page navigation example">
-                    <ul class="inline-flex items-center space-x-1">
+                    <ul class="inline-flex items-center space-x-2">
                         {pageNumber.map((number) => 
                             <li key={number}>
                                 <button 
                                 onClick={()=> paginate(number)}
-                                class={`cursor-pointer py-1.5 px-3 rounded-full leading-tight text-gray-100 bg-slate-700 focus:bg-black border border-slate-700 hover:bg-gray-800 hover:text-gray-200 dark:bg-gray-900 dark:focus:bg-gray-600 dark:border-black dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}>{number}
+                                class={`cursor-pointer py-2.5 px-4 rounded-full leading-tight text-gray-50 bg-gray-500 focus:bg-black hover:bg-gray-800 hover:text-gray-200 dark:bg-slate-600 dark:focus:bg-gray-600 dark:border-black dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}>{number}
                                 </button>
                             </li>
                         )}

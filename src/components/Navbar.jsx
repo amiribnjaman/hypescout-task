@@ -30,11 +30,11 @@ const Navbar = ({ isDark, setIsDark, isLight, setIsLight }) => {
         <div class="flex md:flex-wrap justify-between items-center mx-auto max-w-screen-xl py-2.5">
           <a href="/" class="flex text-white items-center">
             {isDark ? (
-              <h3 className="text-white font-semibold text-[24px]">
+              <h3 className="text-white font-semibold text-[28px]">
                 Collabify
               </h3>
             ) : (
-              <h3 className="text-black font-semibold text-[24px]">
+              <h3 className="text-black font-semibold text-[28px]">
                 Collabify
               </h3>
             )}
@@ -48,7 +48,7 @@ const Navbar = ({ isDark, setIsDark, isLight, setIsLight }) => {
                     <li className="md:mr-2 my-4 md:my-0 rounded-lg">
                       <a
                         href="javascript:void(0)"
-                        class="bg-[#564FB1] bg- px-4 py-2.5 text-white rounded"
+                        class="bg-[#564FB1] bg- px-4 py-2.5 text-[16px] text-white rounded"
                         aria-current="page"
                       >
                         Dashboard
@@ -57,7 +57,7 @@ const Navbar = ({ isDark, setIsDark, isLight, setIsLight }) => {
                     <li className="mr-2 ml-0 my-4 md:my-0 rounded">
                       <a
                         href="javascript:void(0)"
-                        class="text-gray-900  px-4 hover:bg-[#564FB1] dark:text-gray-300 hover:text-white dark:hover:text-white py-2.5 rounded"
+                        class="text-gray-900 text-[16px] px-4 hover:bg-[#564FB1] dark:text-gray-300 hover:text-white dark:hover:text-white py-2.5 rounded"
                       >
                         Campaign
                       </a>
@@ -65,7 +65,7 @@ const Navbar = ({ isDark, setIsDark, isLight, setIsLight }) => {
                     <li className="mr-2 my-4 md:my-0 rounded">
                       <a
                         href="javascript:void(0)"
-                        class="text-gray-900 dark:text-gray-300 px-4 py-2.5 rounded hover:bg-[#564FB1] hover:text-white dark:hover:text-white"
+                        class="text-gray-900 text-[16px] dark:text-gray-300 px-4 py-2.5 rounded hover:bg-[#564FB1] hover:text-white dark:hover:text-white"
                       >
                         Collabifysocial
                       </a>
@@ -73,7 +73,7 @@ const Navbar = ({ isDark, setIsDark, isLight, setIsLight }) => {
                     <li className="mr-2 my-4 md:my-0 rounded">
                       <a
                         href="javascript:void(0)"
-                        class="text-gray-900 dark:text-gray-300 px-4 py-2.5 rounded hover:bg-[#564FB1] hover:text-white dark:hover:text-white"
+                        class="text-gray-900 text-[16px] dark:text-gray-300 px-4 py-2.5 rounded hover:bg-[#564FB1] hover:text-white dark:hover:text-white"
                       >
                         Insights
                       </a>
@@ -93,8 +93,8 @@ const Navbar = ({ isDark, setIsDark, isLight, setIsLight }) => {
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
+                    width="18"
+                    height="18"
                     fill="currentColor"
                     class="bi bi-bell"
                     viewBox="0 0 16 16"
@@ -111,8 +111,8 @@ const Navbar = ({ isDark, setIsDark, isLight, setIsLight }) => {
                   {isDark ? (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="16"
-                      height="16"
+                      width="18"
+                      height="18"
                       fill="currentColor"
                       class="bi bi-moon-fill"
                       viewBox="0 0 16 16"
@@ -122,8 +122,8 @@ const Navbar = ({ isDark, setIsDark, isLight, setIsLight }) => {
                   ) : (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="17"
-                      height="17"
+                      width="18"
+                      height="18"
                       fill="currentColor"
                       class="bi bi-brightness-high-fill"
                       viewBox="0 0 16 16"
@@ -136,19 +136,19 @@ const Navbar = ({ isDark, setIsDark, isLight, setIsLight }) => {
                   <div
                     className={`${
                       showThemeMenu
-                        ? " block shadow-sm md:shadow-none"
+                        ? " block"
                         : " hidden"
-                    } top-[37px] left-[-55px] dark:bg-[#17181B] bg-[#F7F7F8] py-2 absolute rounded-md z-10`}
+                    } top-[37px] left-[-55px] dark:bg-[#17181B] bg-[#F7F7F8] py-2 absolute rounded-md z-10 border dark:border-gray-800 shadow`}
                   >
-                    <ul className="">
+                    <ul className="flex flex-col gap-1">
                       <li
                         onClick={handleIsDark}
-                        className="flex py-2 px-10 dark:hover:text-[#8C87D1] hover:text-[#564FB1] dark:hover:bg-black hover:bg-white mx-1 rounded pl-4 pr-12"
+                        className="flex py-2 px-10 dark:hover:text-[#8C87D1] hover:text-[#564FB1] text-[16px] dark:hover:bg-black hover:bg-white mx-1 rounded pl-4 pr-12"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
+                          width="17"
+                          height="17"
                           fill="currentColor"
                           class="bi bi-moon-fill"
                           viewBox="0 0 16 16"
@@ -159,12 +159,12 @@ const Navbar = ({ isDark, setIsDark, isLight, setIsLight }) => {
                       </li>
                       <li
                         onClick={handleIsLight}
-                        className="flex py-2 pl-4 pr-12 dark:hover:text-[#8C87D1] hover:text-[#564FB1] dark:hover:bg-black hover:bg-white mx-1 rounded"
+                        className="flex py-2 pl-4 pr-12 dark:hover:text-[#8C87D1] hover:text-[#564FB1] text-[16px] dark:hover:bg-black hover:bg-white mx-1 rounded"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
+                          width="18"
+                          height="18"
                           fill="currentColor"
                           class="bi bi-brightness-high-fill"
                           viewBox="0 0 16 16"
@@ -175,12 +175,12 @@ const Navbar = ({ isDark, setIsDark, isLight, setIsLight }) => {
                       </li>
                       <li
                         onClick={handleIsDark}
-                        className="flex py-2 pl-4 pr-12 dark:hover:text-[#8C87D1] hover:text-[#564FB1] dark:hover:bg-black hover:bg-white mx-1 rounded"
+                        className="flex py-2 pl-4 pr-12 dark:hover:text-[#8C87D1] hover:text-[#564FB1] text-[16px] dark:hover:bg-black hover:bg-white mx-1 rounded"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
+                          width="18"
+                          height="18"
                           fill="currentColor"
                           class="bi bi-display"
                           viewBox="0 0 16 16"
@@ -194,7 +194,9 @@ const Navbar = ({ isDark, setIsDark, isLight, setIsLight }) => {
                 </button>
               </li>
               <li className="mr-2 hidden md:block">
-                <h6 class="text-gray-900 dark:text-gray-100">Hi, Rakib</h6>
+                <h6 class="text-gray-900 dark:text-gray-100 text-[16px]">
+                  Hi, Rakib
+                </h6>
               </li>
               <li className="mr-1">
                 <a

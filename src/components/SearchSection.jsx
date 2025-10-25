@@ -21,18 +21,18 @@ const SearchSection = ({ personDetails, range, setSearch, setRange, handleFilter
                 <div className='md:w-8/12 my-4 md:my-0 px-2 md:px-0'>
                     <div class="relative w-full">
                         <div class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none">
-                            <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+                            <svg aria-hidden="true" class="w-6 h-6 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
                         </div>
                         <input
                             onChange={(e) => setSearch(e.target.value)}
-                            type="text" id="simple-search" class=" dark:bg-[#202124] bg-slate-50 border border-[#DBDBDB] dark:border-[#323246] text-gray-900 text-sm rounded-lg focus:ring-slate-300 focus:border-slate-200 block w-full pl-10 py-3 p-2.5  dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#564FB1] dark:focus:border-[#564FB1]" placeholder="Search Profile" required />
+                            type="text" id="simple-search" class=" dark:bg-[#202124] bg-slate-50 border border-[#DBDBDB] dark:border-[#323246] text-gray-900 rounded-lg focus:ring-slate-300 focus:border-slate-200 block w-full pl-10 py-3 p-2.5  dark:placeholder-gray-400 dark:text-white dark:focus:ring-[#564FB1] dark:focus:border-[#564FB1]" placeholder="Search Profile" required />
                     </div>
 
                 </div>
                 <div className='mx-auto md:mx-0 relative'>
                     <button
                         onClick={() => setShowFilter(!showFilter)}
-                        style={{ margin: '0 auto' }} type="button" class=" text-white bg-[#564FB1] flex items-center justify-around focus:ring-4  focus:ring-slate-200 font-medium rounded-lg text-sm px-5 py-3 mr-3 md:mr-2 hover:bg-[#564FB1] focus:outline-none 
+                        style={{ margin: '0 auto' }} type="button" class="text-[16px] text-white bg-[#564FB1] flex items-center justify-around focus:ring-4  focus:ring-slate-200 font-medium rounded-lg text-sm px-5 py-3 mr-3 md:mr-2 hover:bg-[#564FB1] focus:outline-none 
                     dark:focus:ring-[#5148c7]">
                         <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor" class="bi bi-funnel" viewBox="0 0 16 16">
                             <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z" />

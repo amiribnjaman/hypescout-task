@@ -8,7 +8,7 @@ const MainBody = (props) => {
             <div className='w-10/12 mx-auto'>
                 <div className='mb-4'>
                     {findDataAmount ?
-                        <h5 className='text-[17px] text-slate-600 dark:text-[#637381]'>Total Influencer found: <span className='font-semibold'>{findDataAmount}</span></h5> : ''
+                        <h5 className='text-[18px] text-slate-800 dark:text-slate-400'>Total Influencer found: <span className='font-semibold'>{findDataAmount}</span></h5> : ''
                     }
                 </div>
                 <div className='grid md:grid-cols-3 gap-10'>
