@@ -22,7 +22,7 @@ function App() {
 
   // States for pagination
   const [currentPage, setCurrentPage] = useState(1)
-  const [dataPerPage, setDataPerPage] = useState(3)
+  const [dataPerPage, setDataPerPage] = useState(6)
 
   // Pagination calculation
   const indexOfLastPost = currentPage * dataPerPage

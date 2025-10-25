@@ -88,5 +88,35 @@
         "categories": "Fahion",
         "gender": "Male",
         "image": "./img/person9.png"
+    },
+    {
+        "id": 9,
+        "name": "M. Salah",
+        "location": "Dhaka, France",
+        "joined": "Jun 20, 2018",
+        "follwers": "45",
+        "categories": "Fahion",
+        "gender": "Male",
+        "image": "./img/person9.png"
+    },
+    {
+        "id": 9,
+        "name": "M. Salah",
+        "location": "Dhaka, France",
+        "joined": "Jun 20, 2018",
+        "follwers": "45",
+        "categories": "Fahion",
+        "gender": "Male",
+        "image": "./img/person9.png"
+    },
+    {
+        "id": 9,
+        "name": "M. Salah",
+        "location": "Dhaka, France",
+        "joined": "Jun 20, 2018",
+        "follwers": "45",
+        "categories": "Fahion",
+        "gender": "Male",
+        "image": "./img/person9.png"
     }
 ]
